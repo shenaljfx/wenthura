@@ -8,7 +8,7 @@ import { getIllustration } from "@/components/illustrations";
 export default function SolutionsCards() {
   return (
     <motion.div
-      className="flex flex-col gap-[90px]"
+      className="flex flex-col gap-14 sm:gap-[90px]"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.1 }}
@@ -42,7 +42,7 @@ export default function SolutionsCards() {
                 </span>
               </div>
               <BlurIn>
-                <h2 className="mt-6 font-helvetica-neue text-4xl font-medium leading-tight tracking-[-0.03em] text-sintra-dark sm:text-5xl">
+                <h2 className="mt-6 font-helvetica-neue text-2xl font-medium leading-tight tracking-[-0.03em] text-sintra-dark sm:text-4xl md:text-5xl">
                   {s.title}
                 </h2>
               </BlurIn>
@@ -51,7 +51,7 @@ export default function SolutionsCards() {
               </p>
             </div>
 
-            <div className="relative h-80 overflow-hidden rounded-[40px] sm:h-96">
+            <div className="relative h-56 overflow-hidden rounded-3xl sm:h-80 sm:rounded-[40px] md:h-96">
               <Illustration className="absolute inset-0 h-full w-full" />
               <div className="absolute inset-0 bg-gradient-to-t from-white/60 to-transparent" />
             </div>

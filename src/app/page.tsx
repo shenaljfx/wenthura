@@ -55,7 +55,7 @@ export default function HomePage() {
       {/* ------------------------------------------------------------------
           OUR SERVICES & PRODUCTS
       ------------------------------------------------------------------ */}
-      <section id="services" className="bg-white py-28 border-t border-slate-100">
+      <section id="services" className="bg-white py-16 border-t border-slate-100 sm:py-28">
         <div className="container-p">
           <Reveal className="mb-16 text-center">
             <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-slate-400">
@@ -191,9 +191,9 @@ export default function HomePage() {
           01
         </div>
 
-        <div className="container-p relative z-10 py-28 lg:py-36">
+        <div className="container-p relative z-10 py-16 sm:py-28 lg:py-36">
           <Reveal>
-            <div className="mb-16">
+            <div className="mb-10 sm:mb-16">
               <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-orange-500/50">01 — Edutech Product</p>
               <AnimatedLine className="bg-orange-500" />
             </div>
@@ -252,13 +252,13 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-3xl border border-orange-100 bg-gradient-to-br from-orange-50/60 via-white to-white shadow-xl shadow-orange-100/30">
                   <DoodleNestIll className="aspect-[4/3] h-full w-full" />
                 </div>
-                <div className="absolute -bottom-5 -left-5 rounded-2xl border border-orange-100 bg-white px-5 py-3.5 shadow-lg">
+                <div className="absolute -bottom-3 -left-3 rounded-2xl border border-orange-100 bg-white px-4 py-2.5 shadow-lg sm:-bottom-5 sm:-left-5 sm:px-5 sm:py-3.5">
                   <p className="font-mono text-[9px] uppercase tracking-widest text-orange-500">Active Schools</p>
-                  <p className="mt-0.5 text-2xl font-black text-slate-900">500+</p>
+                  <p className="mt-0.5 text-xl font-black text-slate-900 sm:text-2xl">500+</p>
                 </div>
-                <div className="absolute -right-5 -top-5 rounded-2xl border border-orange-100 bg-white px-5 py-3.5 shadow-lg">
+                <div className="absolute -right-3 -top-3 rounded-2xl border border-orange-100 bg-white px-4 py-2.5 shadow-lg sm:-right-5 sm:-top-5 sm:px-5 sm:py-3.5">
                   <p className="font-mono text-[9px] uppercase tracking-widest text-orange-500">Students Reached</p>
-                  <p className="mt-0.5 text-2xl font-black text-slate-900">50K+</p>
+                  <p className="mt-0.5 text-xl font-black text-slate-900 sm:text-2xl">50K+</p>
                 </div>
               </div>
               {/* Contextual photo */}
@@ -275,15 +275,15 @@ export default function HomePage() {
           </div>
 
           <Reveal className="mt-20">
-            <div className="grid grid-cols-3 gap-8 border-t border-orange-100 pt-12">
+            <div className="grid grid-cols-3 gap-4 border-t border-orange-100 pt-8 sm:gap-8 sm:pt-12">
               {[
                 { v: "500+", l: "Active schools & centres"  },
                 { v: "50K+", l: "Students on the platform"  },
                 { v: "98%",  l: "Parent satisfaction rate"  },
               ].map((s) => (
                 <div key={s.l} className="text-center">
-                  <div className="text-4xl font-black" style={{ color: "#F97316" }}>{s.v}</div>
-                  <div className="mt-1 text-xs text-slate-400">{s.l}</div>
+                  <div className="text-2xl font-black sm:text-4xl" style={{ color: "#F97316" }}>{s.v}</div>
+                  <div className="mt-1 text-[10px] text-slate-400 sm:text-xs">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -312,9 +312,9 @@ export default function HomePage() {
           02
         </div>
 
-        <div className="container-p relative z-10 py-28 lg:py-36">
+        <div className="container-p relative z-10 py-16 sm:py-28 lg:py-36">
           <Reveal>
-            <div className="mb-16">
+            <div className="mb-10 sm:mb-16">
               <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-blue-600/50">02 — AI-Powered Product</p>
               <AnimatedLine className="bg-blue-500" />
             </div>
@@ -326,7 +326,7 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-3xl border border-blue-100 bg-gradient-to-br from-blue-50/60 via-white to-white shadow-xl shadow-blue-50/60">
                   <NenaAIIll className="aspect-[4/3] h-full w-full" />
                 </div>
-                <div className="absolute -bottom-5 -right-5 rounded-2xl border border-blue-100 bg-white px-5 py-3.5 shadow-lg">
+                <div className="absolute -bottom-3 -right-3 rounded-2xl border border-blue-100 bg-white px-4 py-2.5 shadow-lg sm:-bottom-5 sm:-right-5 sm:px-5 sm:py-3.5">
                   <p className="font-mono text-[9px] uppercase tracking-widest text-blue-600">Score Improvement</p>
                   <p className="mt-0.5 text-2xl font-black text-slate-900">+42%</p>
                 </div>
@@ -391,7 +391,7 @@ export default function HomePage() {
           </div>
 
           <Reveal className="mt-20">
-            <div className="grid grid-cols-2 gap-6 border-t border-blue-100 pt-12 sm:grid-cols-4">
+            <div className="grid grid-cols-2 gap-4 border-t border-blue-100 pt-8 sm:grid-cols-4 sm:gap-6 sm:pt-12">
               {[
                 { v: "42%",  l: "Average score improvement" },
                 { v: "3x",   l: "Faster content mastery"    },
@@ -399,8 +399,8 @@ export default function HomePage() {
                 { v: "24/7", l: "AI tutoring availability"   },
               ].map((s) => (
                 <div key={s.l} className="text-center">
-                  <div className="text-4xl font-black text-blue-600">{s.v}</div>
-                  <div className="mt-1 text-xs text-slate-400">{s.l}</div>
+                  <div className="text-2xl font-black text-blue-600 sm:text-4xl">{s.v}</div>
+                  <div className="mt-1 text-[10px] text-slate-400 sm:text-xs">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -430,9 +430,9 @@ export default function HomePage() {
           03
         </div>
 
-        <div className="container-p relative z-10 py-28 lg:py-36">
+        <div className="container-p relative z-10 py-16 sm:py-28 lg:py-36">
           <Reveal>
-            <div className="mb-16">
+            <div className="mb-10 sm:mb-16">
               <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-orange-500/50">03 — Automotive Product</p>
               <AnimatedLine style={{ background: "#F97316" }} />
             </div>
@@ -491,7 +491,7 @@ export default function HomePage() {
                 <div className="relative overflow-hidden rounded-3xl border border-orange-100 bg-gradient-to-br from-orange-50/60 via-white to-white shadow-xl shadow-orange-50/60">
                   <AutoFlowIll className="aspect-[4/3] h-full w-full" />
                 </div>
-                <div className="absolute -left-5 -top-5 rounded-2xl border border-orange-100 bg-white px-5 py-3.5 shadow-lg">
+                <div className="absolute -left-3 -top-3 rounded-2xl border border-orange-100 bg-white px-4 py-2.5 shadow-lg sm:-left-5 sm:-top-5 sm:px-5 sm:py-3.5">
                   <p className="font-mono text-[9px] uppercase tracking-widest text-orange-500">Efficiency Gain</p>
                   <p className="mt-0.5 text-2xl font-black text-slate-900">+40%</p>
                 </div>
@@ -510,15 +510,15 @@ export default function HomePage() {
           </div>
 
           <Reveal className="mt-20">
-            <div className="grid grid-cols-3 gap-6 border-t border-orange-100 pt-12">
+            <div className="grid grid-cols-3 gap-4 border-t border-orange-100 pt-8 sm:gap-6 sm:pt-12">
               {[
                 { v: "200+", l: "Garages & service stations" },
                 { v: "95%",  l: "Customer satisfaction"       },
                 { v: "40%",  l: "Operational efficiency gain" },
               ].map((s) => (
                 <div key={s.l} className="text-center">
-                  <div className="text-4xl font-black" style={{ color: "#F97316" }}>{s.v}</div>
-                  <div className="mt-1 text-xs text-slate-400">{s.l}</div>
+                  <div className="text-2xl font-black sm:text-4xl" style={{ color: "#F97316" }}>{s.v}</div>
+                  <div className="mt-1 text-[10px] text-slate-400 sm:text-xs">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -545,7 +545,7 @@ export default function HomePage() {
       {/* ------------------------------------------------------------------
           ABOUT WENTHURA
       ------------------------------------------------------------------ */}
-      <section className="bg-white py-28">
+      <section className="bg-white py-16 sm:py-28">
         <div className="container-p">
           <div className="grid gap-12 lg:grid-cols-[1fr,1.6fr] lg:items-center lg:gap-20">
             <Reveal>
@@ -616,7 +616,7 @@ export default function HomePage() {
       {/* ------------------------------------------------------------------
           FINAL CTA
       ------------------------------------------------------------------ */}
-      <section className="relative overflow-hidden bg-slate-900 py-36">
+      <section className="relative overflow-hidden bg-slate-900 py-20 sm:py-36">
         <div className="absolute inset-0">
           <LazyImage
             src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1600&q=80&fit=crop"

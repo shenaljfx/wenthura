@@ -80,7 +80,7 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative flex min-h-[100svh] flex-col items-center justify-center overflow-hidden bg-white"
+      className="relative flex h-[100svh] flex-col items-center justify-center overflow-hidden bg-white"
     >
       {/* ── Background video (flipped) ─────────────────────────── */}
       <div className="absolute inset-0 z-0" aria-hidden>
@@ -105,134 +105,142 @@ export function Hero() {
 
       {/* ── Main content ─────────────────────────────────────── */}
       <motion.div
-        className="relative z-10 flex w-full max-w-[1200px] flex-col items-center gap-8 px-6 pt-[290px] pb-20 text-center"
+        className="relative z-10 flex h-full w-full max-w-[1200px] flex-col items-center justify-between px-5 pt-20 pb-6 text-center sm:px-6 sm:pt-24 sm:pb-10"
         style={{ opacity: scrollOpacity, y: scrollY }}
       >
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2, ease }}
-          className="mb-8 inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white/80 px-5 py-2 shadow-sm backdrop-blur-md"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#2563EB] opacity-60" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-[#2563EB]" />
-          </span>
-          <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-slate-400">
-            Wenthura Technology
-          </span>
-        </motion.div>
+        {/* Spacer top — pushes center block down a bit */}
+        <div className="shrink" />
 
-        {/* Headline */}
-        <h1 className="font-display font-black" style={{ fontSize: "clamp(2.5rem, 7vw, 5rem)", lineHeight: "1.08", letterSpacing: "-0.04em" }}>
-          <span className="block overflow-hidden">
-            <motion.span initial={{ y: "110%" }} animate={{ y: "0%" }} transition={{ duration: 0.9, delay: 0.4, ease }} className="block text-slate-900">
-              We Engineer The
-            </motion.span>
-          </span>
-          <span className="block overflow-hidden">
-            <motion.span initial={{ y: "110%" }} animate={{ y: "0%" }} transition={{ duration: 0.9, delay: 0.5, ease }} className="block text-slate-900">
-              Infrastructure Behind
-            </motion.span>
-          </span>
-          <span className="block overflow-hidden">
-            <motion.span initial={{ y: "110%" }} animate={{ y: "0%" }} transition={{ duration: 1, delay: 0.6, ease }}
-              className="block text-slate-900">
-              Digital{" "}
-              <em
-                className="not-italic bg-gradient-to-r from-[#3B82F6] via-[#FBBF24] to-[#F97316] bg-clip-text text-transparent"
-                style={{ fontFamily: "var(--font-instrument, 'Instrument Serif', serif)", fontSize: "1.25em", fontStyle: "italic" }}
-              >
-                Economies.
-              </em>
-            </motion.span>
-          </span>
-        </h1>
-
-        {/* Sub-headline */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.85, ease }}
-          className="max-w-[554px] text-lg leading-relaxed sm:text-xl"
-          style={{ color: "rgba(55, 58, 70, 0.8)" }}
-        >
-          Purpose-built products for education, AI learning, and automotive —
-          powered by modern technology and deep domain expertise.
-        </motion.p>
-
-        {/* CTAs */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1, ease }}
-          className="flex flex-wrap items-center justify-center gap-4"
-        >
-          <Link href="/contact"
-            className="group inline-flex items-center gap-3 rounded-full bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] px-8 py-4 text-[11px] font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl shadow-[inset_-4px_-6px_25px_0px_rgba(201,201,201,0.08),inset_4px_4px_10px_0px_rgba(29,29,29,0.24)]"
+        {/* Center block */}
+        <div className="flex flex-col items-center gap-3 sm:gap-5">
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2, ease }}
+            className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 py-1.5 shadow-sm backdrop-blur-md sm:gap-3 sm:px-5 sm:py-2"
           >
-            Start the conversation
-            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
-          <a href="#services"
-            className="liquid-glass inline-flex items-center gap-2 rounded-full px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:text-slate-900"
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#2563EB] opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#2563EB]" />
+            </span>
+            <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-slate-400">
+              Wenthura Technology
+            </span>
+          </motion.div>
+
+          {/* Headline */}
+          <h1 className="font-display font-black" style={{ fontSize: "clamp(1.75rem, 7vw, 5rem)", lineHeight: "1.08", letterSpacing: "-0.04em" }}>
+            <span className="block overflow-hidden">
+              <motion.span initial={{ y: "110%" }} animate={{ y: "0%" }} transition={{ duration: 0.9, delay: 0.4, ease }} className="block text-slate-900">
+                We Engineer The
+              </motion.span>
+            </span>
+            <span className="block overflow-hidden">
+              <motion.span initial={{ y: "110%" }} animate={{ y: "0%" }} transition={{ duration: 0.9, delay: 0.5, ease }} className="block text-slate-900">
+                Infrastructure Behind
+              </motion.span>
+            </span>
+            <span className="block overflow-hidden">
+              <motion.span initial={{ y: "110%" }} animate={{ y: "0%" }} transition={{ duration: 1, delay: 0.6, ease }}
+                className="block text-slate-900">
+                Digital{" "}
+                <em
+                  className="not-italic bg-gradient-to-r from-[#3B82F6] via-[#FBBF24] to-[#F97316] bg-clip-text text-transparent"
+                  style={{ fontFamily: "var(--font-instrument, 'Instrument Serif', serif)", fontSize: "1.25em", fontStyle: "italic" }}
+                >
+                  Economies.
+                </em>
+              </motion.span>
+            </span>
+          </h1>
+
+          {/* Sub-headline */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.85, ease }}
+            className="max-w-[554px] text-sm leading-relaxed sm:text-base md:text-xl"
+            style={{ color: "rgba(55, 58, 70, 0.8)" }}
           >
-            Explore services
-          </a>
-        </motion.div>
+            Purpose-built products for education, AI learning, and automotive —
+            powered by modern technology and deep domain expertise.
+          </motion.p>
 
-        {/* Metrics */}
-        <motion.div
-          initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="mt-16 flex items-center gap-8 sm:gap-12"
-        >
-          {metrics.map((m, i) => (
-            <Fragment key={m.label}>
-              {i > 0 && <div className="h-8 w-px bg-slate-200" />}
-              <div className="flex items-baseline gap-2">
-                <span className="font-display text-3xl font-black text-slate-900 sm:text-4xl">
-                  <AnimatedNumber target={m.value} suffix={m.suffix} />
-                </span>
-                <span className="font-mono text-[9px] uppercase tracking-[0.2em] text-slate-400">
-                  {m.label}
-                </span>
-              </div>
-            </Fragment>
-          ))}
-        </motion.div>
-
-        {/* Product pills */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
-          className="mt-8 flex flex-wrap items-center justify-center gap-2.5"
-        >
-          {products.map((p) => (
-            <Link key={p.href} href={p.href}
-              className="group inline-flex items-center gap-2.5 rounded-full border border-slate-200 bg-white/70 px-5 py-2.5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white hover:shadow-md hover:shadow-slate-200/50"
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1, ease }}
+            className="flex flex-col items-center gap-2.5 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-4"
+          >
+            <Link href="/contact"
+              className="group inline-flex items-center gap-2.5 rounded-full bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] px-5 py-2.5 text-[10px] font-bold uppercase tracking-[0.18em] text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl shadow-[inset_-4px_-6px_25px_0px_rgba(201,201,201,0.08),inset_4px_4px_10px_0px_rgba(29,29,29,0.24)] sm:px-8 sm:py-4 sm:text-[11px]"
             >
-              <span className="h-1.5 w-1.5 rounded-full transition-transform duration-300 group-hover:scale-[1.8]"
-                style={{ background: p.color, boxShadow: `0 0 8px ${p.color}40` }} />
-              <span className="text-xs font-semibold text-slate-500 group-hover:text-slate-800">{p.name}</span>
+              Start the conversation
+              <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
-          ))}
-        </motion.div>
-      </motion.div>
+            <a href="#services"
+              className="liquid-glass inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-slate-600 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:text-slate-900 sm:px-8 sm:py-4 sm:text-[11px]"
+            >
+              Explore services
+            </a>
+          </motion.div>
+        </div>
 
-      {/* ── Scroll indicator ──────────────────────────────────── */}
-      <motion.div
-        initial={{ opacity: 0 }} animate={{ opacity: 1 }}
-        transition={{ delay: 2, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 z-10 -translate-x-1/2"
-      >
-        <a href="#services" className="group flex flex-col items-center gap-2 text-slate-300 transition-colors hover:text-slate-500" aria-label="Scroll to services">
-          <span className="font-mono text-[8px] uppercase tracking-[0.3em]">Scroll</span>
-          <span className="relative flex h-7 w-[18px] items-start justify-center rounded-full border border-slate-300 pt-1.5 group-hover:border-slate-400">
-            <motion.span className="h-1.5 w-1 rounded-full bg-current"
-              animate={{ y: [0, 6, 0], opacity: [1, 0.3, 1] }}
-              transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }} />
-          </span>
-        </a>
+        {/* Bottom block — metrics, pills, scroll */}
+        <div className="flex flex-col items-center gap-3 sm:gap-4">
+          {/* Metrics */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 sm:gap-x-8 md:gap-x-12"
+          >
+            {metrics.map((m, i) => (
+              <Fragment key={m.label}>
+                {i > 0 && <div className="hidden h-6 w-px bg-slate-200 sm:block sm:h-8" />}
+                <div className="flex items-baseline gap-1 sm:gap-2">
+                  <span className="font-display text-lg font-black text-slate-900 sm:text-3xl md:text-4xl">
+                    <AnimatedNumber target={m.value} suffix={m.suffix} />
+                  </span>
+                  <span className="font-mono text-[7px] uppercase tracking-[0.15em] text-slate-400 sm:text-[9px] sm:tracking-[0.2em]">
+                    {m.label}
+                  </span>
+                </div>
+              </Fragment>
+            ))}
+          </motion.div>
+
+          {/* Product pills */}
+          <motion.div
+            initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 1.4 }}
+            className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2.5"
+          >
+            {products.map((p) => (
+              <Link key={p.href} href={p.href}
+                className="group inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white/70 px-3 py-1.5 backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white hover:shadow-md hover:shadow-slate-200/50 sm:gap-2.5 sm:px-5 sm:py-2.5"
+              >
+                <span className="h-1.5 w-1.5 rounded-full transition-transform duration-300 group-hover:scale-[1.8]"
+                  style={{ background: p.color, boxShadow: `0 0 8px ${p.color}40` }} />
+                <span className="text-[11px] font-semibold text-slate-500 group-hover:text-slate-800 sm:text-xs">{p.name}</span>
+              </Link>
+            ))}
+          </motion.div>
+
+          {/* Scroll indicator — inline in flow, not absolute */}
+          <motion.div
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }}
+            transition={{ delay: 2, duration: 0.8 }}
+          >
+            <a href="#services" className="group flex flex-col items-center gap-1.5 text-slate-300 transition-colors hover:text-slate-500" aria-label="Scroll to services">
+              <span className="font-mono text-[8px] uppercase tracking-[0.3em]">Scroll</span>
+              <span className="relative flex h-7 w-[18px] items-start justify-center rounded-full border border-slate-300 pt-1.5 group-hover:border-slate-400">
+                <motion.span className="h-1.5 w-1 rounded-full bg-current"
+                  animate={{ y: [0, 6, 0], opacity: [1, 0.3, 1] }}
+                  transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }} />
+              </span>
+            </a>
+          </motion.div>
+        </div>
       </motion.div>
 
       {/* ── Bottom fade to white ──────────────────────────────── */}

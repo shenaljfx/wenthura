@@ -14,7 +14,7 @@ export default function SolutionsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="relative flex min-h-[70vh] flex-col items-center justify-center overflow-hidden px-6 pt-40 pb-20 md:px-12 lg:px-[60px]">
+      <section className="relative flex min-h-[60vh] sm:min-h-[70vh] flex-col items-center justify-center overflow-hidden px-6 pt-28 pb-16 sm:pt-40 sm:pb-20 md:px-12 lg:px-[60px]">
         <video
           className="absolute inset-0 h-full w-full object-cover"
           autoPlay
@@ -35,7 +35,7 @@ export default function SolutionsPage() {
             <span className="mb-4 inline-block font-manrope text-xs font-semibold uppercase tracking-[0.3em] text-sintra-accent">
               Our Solutions
             </span>
-            <h1 className="mx-auto max-w-3xl font-helvetica-neue text-5xl font-medium leading-[0.95] tracking-[-0.03em] text-[#010828] sm:text-6xl lg:text-8xl">
+            <h1 className="mx-auto max-w-3xl font-helvetica-neue text-3xl font-medium leading-[0.95] tracking-[-0.03em] text-[#010828] sm:text-5xl md:text-6xl lg:text-8xl">
               Innovate with{" "}
               <span className="bg-gradient-to-r from-[#B56939] via-[#5C3779] to-[#454BBB] bg-clip-text italic text-transparent">
                 precision.
@@ -51,7 +51,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* Solutions Index + Cards */}
-      <section className="bg-white px-6 py-20 md:px-12 lg:px-[60px]">
+      <section className="bg-white px-6 py-12 sm:py-20 md:px-12 lg:px-[60px]">
         <div className="mx-auto max-w-[1360px]">
           <div className="grid gap-14 lg:grid-cols-[240px,1fr]">
             <aside className="hidden lg:block">
