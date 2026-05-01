@@ -10,7 +10,6 @@ const products = [
   { href: "/products/doodlenest",         label: "DoodleNest",         desc: "Early Learning Platform",   dot: "#FBBF24" },
   { href: "/products/autoflow",           label: "AutoFlow",           desc: "Automotive ERP",            dot: "#F97316" },
   { href: "/products/nena-ai",            label: "Nena AI",            desc: "AI Learning Platform",      dot: "#3B82F6" },
-  { href: "/products/business-solutions", label: "Business Solutions", desc: "Fintech & Cloud Services",  dot: "#0F172A" },
 ];
 
 const links = [

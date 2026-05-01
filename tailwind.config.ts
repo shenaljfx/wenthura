@@ -70,8 +70,8 @@ const config: Config = {
           "100%": { backgroundPosition: "200% center" },
         },
         "fade-up": {
-          "0%": { opacity: "0", transform: "translateY(28px)" },
-          "100%": { opacity: "1", transform: "translateY(0px)" },
+          "0%": { opacity: "0", transform: "translateY(20px)", filter: "blur(4px)" },
+          "100%": { opacity: "1", transform: "translateY(0px)", filter: "blur(0)" },
         },
         "fade-in": {
           "0%": { opacity: "0" },
